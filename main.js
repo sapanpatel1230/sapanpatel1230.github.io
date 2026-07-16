@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCopilotChat();
     initArchitectureFlows();
     initScrollReveal();
+    initWorkSpan();
 });
 
 /* ==========================================
@@ -572,4 +573,114 @@ function initArchitectureFlows() {
 
     // Set initial card state
     updateInfoCard(nodeDatabase['opt-router']);
+}
+
+/* ==========================================
+   5. INTERACTIVE WORK SPAN VISUALIZER
+   ========================================== */
+const workSpanDatabase = {
+    adoption: {
+        title: 'Adoption Sessions',
+        iconClass: 'fa-solid fa-users-viewfinder',
+        tag: 'Change Management',
+        desc: 'Driving organizational change by running hands-on user adoption sessions and workshops, showing non-technical teams how to utilize deployed AI features effectively.'
+    },
+    scoping: {
+        title: 'AI Scoping',
+        iconClass: 'fa-solid fa-magnifying-glass-chart',
+        tag: 'Workflow Analysis',
+        desc: 'Collaborating with business analysts and stakeholders to screen operations, map bottlenecks, and identify exact opportunities where AI can drive value.'
+    },
+    tooling: {
+        title: 'Outcome-Driven Tooling',
+        iconClass: 'fa-solid fa-screwdriver-wrench',
+        tag: 'Tool Selection',
+        desc: 'Evaluating different LLMs, local Python script logic, and orchestration frameworks to select the right technical tools that produce the best business outcome.'
+    },
+    cost: {
+        title: 'Cost & Credit Optimization',
+        iconClass: 'fa-solid fa-scale-balanced',
+        tag: 'Resource Management',
+        desc: 'Developing scalable architectures that reduce external LLM calls. Bypasses premium API requests by using local computation scripts, cutting token billing by 20-40%.'
+    },
+    guidance: {
+        title: 'Microsoft AI Guidance',
+        iconClass: 'fa-solid fa-compass',
+        tag: 'Ecosystem Advisory',
+        desc: 'Advising teams and clients on how to maximize value from the Microsoft AI Ecosystem, including Copilot Studio, Power Platform, MCP, and Azure AI Foundry.'
+    },
+    requirements: {
+        title: 'Client Solutions',
+        iconClass: 'fa-solid fa-comments',
+        tag: 'Requirement Engineering',
+        desc: 'Translating unstructured enterprise requirements into highly detailed system workflows, sequencing, and deployment roadmaps for custom AI agents.'
+    },
+    upgrade: {
+        title: 'Continuous Upgrades',
+        iconClass: 'fa-solid fa-arrows-spin',
+        tag: 'Application Lifecycle',
+        desc: 'Constantly monitoring production systems, fine-tuning prompt templates, implementing security updates, and expanding capabilities of deployed AI agents.'
+    },
+    sharing: {
+        title: 'Knowledge Sharing',
+        iconClass: 'fa-solid fa-chalkboard-user',
+        tag: 'Enablement',
+        desc: 'Organizing internal tech-talks, training sessions, and technical documentation sweeps to ensure developers are up-to-date on agentic capabilities.'
+    },
+    team: {
+        title: 'Team Leadership',
+        iconClass: 'fa-solid fa-people-roof',
+        tag: 'Management',
+        desc: 'Mentoring and directing a team of junior AI developers, managing task lists, performing code reviews, and nurturing a collaborative learning environment.'
+    }
+};
+
+function initWorkSpan() {
+    const wrapper = document.querySelector('.work-span-circle-wrapper');
+    if (!wrapper) return;
+    
+    const nodes = document.querySelectorAll('.work-span-node');
+    const detailTitle = document.getElementById('span-detail-title');
+    const detailDesc = document.getElementById('span-detail-desc');
+    const detailIcon = document.getElementById('span-detail-icon');
+    const detailTag = document.getElementById('span-detail-tag');
+    
+    // Position nodes in a circle
+    function positionNodes() {
+        const radius = window.innerWidth <= 992 ? 120 : 170;
+        nodes.forEach((node, index) => {
+            const angle = (index * 2 * Math.PI) / nodes.length;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            node.style.left = `calc(50% + ${x}px)`;
+            node.style.top = `calc(50% + ${y}px)`;
+        });
+    }
+    
+    positionNodes();
+    window.addEventListener('resize', positionNodes);
+    
+    function updateSpanCard(key) {
+        const data = workSpanDatabase[key];
+        if (!data) return;
+        
+        detailTitle.textContent = data.title;
+        detailDesc.textContent = data.desc;
+        detailTag.textContent = data.tag;
+        detailIcon.innerHTML = `<i class="${data.iconClass}"></i>`;
+    }
+    
+    nodes.forEach(node => {
+        const key = node.getAttribute('data-span');
+        
+        node.addEventListener('click', () => {
+            nodes.forEach(n => n.classList.remove('active'));
+            node.classList.add('active');
+            updateSpanCard(key);
+        });
+        
+        node.addEventListener('mouseenter', () => {
+            updateSpanCard(key);
+        });
+    });
 }
