@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initArchitectureFlows();
     initScrollReveal();
     initWorkSpan();
+    initAgentDevCircle();
 });
 
 /* ==========================================
@@ -681,6 +682,86 @@ function initWorkSpan() {
         
         node.addEventListener('mouseenter', () => {
             updateSpanCard(key);
+        });
+    });
+}
+
+/* ==========================================
+   6. INTERACTIVE AGENT DEV VALUE CIRCLE
+   ========================================== */
+const agentDevDatabase = {
+    cognitive: {
+        title: 'Cognitive Skill Engineering',
+        iconClass: 'fa-solid fa-brain',
+        tag: 'Skill Engineering',
+        desc: 'Designing custom agent actions and skills that translate natural language prompts into structured API payloads, bridging LLMs to enterprise databases.'
+    },
+    safeguards: {
+        title: 'Deterministic Safeguards',
+        iconClass: 'fa-solid fa-arrow-down-up-lock',
+        tag: 'Agent Compliance',
+        desc: 'Constructing rigid code boundaries (via Python and schema mapping) that contain LLM outputs, guaranteeing zero conversational drift and 100% compliance.'
+    },
+    disruption: {
+        title: 'SaaS Cost Disruption',
+        iconClass: 'fa-solid fa-hand-holding-dollar',
+        tag: 'Cost Reduction',
+        desc: 'Building in-house, custom agent skills that replace expensive third-party software subscriptions with direct, self-hosted API solutions.'
+    },
+    optimization: {
+        title: 'Token & Cost Optimization',
+        iconClass: 'fa-solid fa-gauge-high',
+        tag: 'Optimization',
+        desc: 'Implementing sophisticated caching, context trimming, and prompt-routing filters that reduce LLM operational credit bills by up to 40%.'
+    }
+};
+
+function initAgentDevCircle() {
+    const wrapper = document.getElementById('agent-dev-circle-wrapper');
+    if (!wrapper) return;
+    
+    const nodes = wrapper.querySelectorAll('.work-span-node');
+    const detailTitle = document.getElementById('dev-detail-title');
+    const detailDesc = document.getElementById('dev-detail-desc');
+    const detailIcon = document.getElementById('dev-detail-icon');
+    const detailTag = document.getElementById('dev-detail-tag');
+    
+    // Position nodes in a circle
+    function positionNodes() {
+        const radius = window.innerWidth <= 992 ? 120 : 170;
+        nodes.forEach((node, index) => {
+            const angle = (index * 2 * Math.PI) / nodes.length;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            node.style.left = `calc(50% + ${x}px)`;
+            node.style.top = `calc(50% + ${y}px)`;
+        });
+    }
+    
+    positionNodes();
+    window.addEventListener('resize', positionNodes);
+    
+    function updateDevCard(key) {
+        const data = agentDevDatabase[key];
+        if (!data) return;
+        
+        detailTitle.textContent = data.title;
+        detailDesc.textContent = data.desc;
+        detailTag.textContent = data.tag;
+        detailIcon.innerHTML = `<i class="${data.iconClass}"></i>`;
+    }
+    
+    nodes.forEach(node => {
+        const key = node.getAttribute('data-span');
+        
+        node.addEventListener('click', () => {
+            nodes.forEach(n => n.classList.remove('active'));
+            node.classList.add('active');
+            updateDevCard(key);
+        });
+        
+        node.addEventListener('mouseenter', () => {
+            updateDevCard(key);
         });
     });
 }
