@@ -637,10 +637,10 @@ const workSpanDatabase = {
 };
 
 function initWorkSpan() {
-    const wrapper = document.querySelector('.work-span-circle-wrapper');
+    const wrapper = document.getElementById('work-span-circle-wrapper');
     if (!wrapper) return;
     
-    const nodes = document.querySelectorAll('.work-span-node');
+    const nodes = wrapper.querySelectorAll('.work-span-node');
     const detailTitle = document.getElementById('span-detail-title');
     const detailDesc = document.getElementById('span-detail-desc');
     const detailIcon = document.getElementById('span-detail-icon');
