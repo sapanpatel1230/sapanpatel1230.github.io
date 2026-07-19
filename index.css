@@ -1539,22 +1539,26 @@ body {
         margin-bottom: 2rem;
     }
     .timeline-bar {
-        left: 30px;
+        left: 20px !important;
     }
     .timeline-item {
-        width: 100%;
-        padding-left: 5rem;
-        padding-right: 0;
+        width: 100% !important;
+        left: 0 !important;
+        padding-left: 3rem !important;
+        padding-right: 0 !important;
     }
-    .timeline-item:nth-child(odd) {
-        left: 0;
-        text-align: left;
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0 !important;
+        text-align: left !important;
     }
-    .timeline-item:nth-child(odd) .timeline-tech {
-        justify-content: flex-start;
+    .timeline-item:nth-child(odd) .timeline-tech,
+    .timeline-item:nth-child(even) .timeline-tech {
+        justify-content: flex-start !important;
     }
-    .timeline-dot {
-        left: 30px !important;
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 20px !important;
     }
     .credentials-grid {
         grid-template-columns: 1fr;
@@ -2119,6 +2123,38 @@ html, body {
 
     .flow-svg-container svg {
         min-width: 550px;
+    }
+
+    .timeline {
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+    .timeline-bar {
+        left: 15px !important;
+    }
+    .timeline-item {
+        width: 100% !important;
+        left: 0 !important;
+        padding-left: 2.25rem !important;
+        padding-right: 0 !important;
+        margin-bottom: 2.5rem !important;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0 !important;
+        text-align: left !important;
+    }
+    .timeline-item:nth-child(odd) .timeline-tech,
+    .timeline-item:nth-child(even) .timeline-tech {
+        justify-content: flex-start !important;
+    }
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 15px !important;
+    }
+    .timeline-card {
+        padding: 1.25rem !important;
+        border-radius: 14px !important;
     }
 }
 
