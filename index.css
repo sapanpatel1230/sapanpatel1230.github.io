@@ -1534,7 +1534,8 @@ body {
         gap: 3rem;
     }
     .hero-visual {
-        order: -1;
+        order: 2;
+        margin-top: 2.5rem;
         margin-bottom: 2rem;
     }
     .timeline-bar {
