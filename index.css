@@ -1980,22 +1980,35 @@ html, body {
     }
 
     .hero-description {
-        font-size: 1.02rem;
+        font-size: 0.98rem;
         line-height: 1.68;
-        color: #e2e8f0;
+        color: #f1f5f9;
         margin-bottom: 1.5rem;
         text-align: left;
+        background: rgba(30, 41, 59, 0.55);
+        border: 1px solid var(--border-color);
+        padding: 1.25rem;
+        border-radius: 14px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero-description strong {
+        color: #67e8f9;
     }
 
     .hero-quote {
         font-size: 0.95rem;
         line-height: 1.6;
         text-align: left;
-        border-left: 4px solid var(--secondary);
-        background: rgba(139, 92, 246, 0.08);
-        padding: 1rem 1.2rem;
+        border-left: 4px solid var(--primary);
+        background: rgba(139, 92, 246, 0.12);
+        border-top: 1px solid rgba(139, 92, 246, 0.2);
+        border-right: 1px solid rgba(139, 92, 246, 0.2);
+        border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        padding: 1.15rem 1.25rem;
         margin: 1.25rem 0 2rem 0;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 14px 14px 0;
     }
 
     .hero-quote i {
