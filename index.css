@@ -1965,21 +1965,49 @@ html, body {
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .hero-content {
+        text-align: left;
     }
 
     .hero-title {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
         letter-spacing: -0.5px;
+        text-align: left;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1.02rem;
+        line-height: 1.68;
+        color: #e2e8f0;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .hero-quote {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+        border-left: 4px solid var(--secondary);
+        background: rgba(139, 92, 246, 0.08);
+        padding: 1rem 1.2rem;
+        margin: 1.25rem 0 2rem 0;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .hero-quote i {
+        color: var(--secondary);
     }
 
     .hero-tech-tags {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero-actions {
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         width: 100%;
     }
