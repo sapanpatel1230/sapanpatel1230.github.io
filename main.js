@@ -349,7 +349,8 @@ function initCopilotChat() {
                 <li><strong>Google:</strong> Generative AI Fundamentals</li>
                 <li><strong>Custom:</strong> Cowork Skill Creation (Custom Actions &amp; API Skills)</li>
             </ul>`;
-         if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('reach')) {
+        }
+        if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('reach')) {
             return `You can reach Sapan via email at <a href="mailto:sapanpatel1230@gmail.com" style="color:var(--secondary);">sapanpatel1230@gmail.com</a> or connect with him on <a href="https://www.linkedin.com/in/sapan-patel-807321222/" target="_blank" style="color:var(--secondary); text-decoration:underline;">LinkedIn</a>. Feel free to use the contact cards at the bottom of the page!`;
         }
         if (query.includes('wayfinder') || query.includes('way finder') || query.includes('ecosystem') || query.includes('navigator') || query.includes('decision engine')) {
