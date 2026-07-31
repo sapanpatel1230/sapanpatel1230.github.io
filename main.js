@@ -245,6 +245,17 @@ function initCopilotChat() {
                 <li>👥 <strong>Mentor - TCS AI Fridays (Season 2):</strong> Served as a technical mentor, guiding development teams in architecting low-credit multi-agent products.</li>
                 <li>🏅 <strong>AI Appreciate Badge:</strong> Awarded "AI For All" honor by Intel and Digital India (2025) for spreading AI literacy.</li>
             </ul>
+        `,
+        wayfinder: `
+            Sapan developed the <strong>Wayfinder Decision Engine</strong>, a public utility tool designed to navigate the Microsoft AI Ecosystem.
+            <br/><br/>
+            <strong>Core Functionality:</strong>
+            <ul class="bullet-list">
+                <li><strong>Task Analysis:</strong> Analyzes user requests or technical tasks and recommends the absolute best-fit tool from the Microsoft AI Ecosystem (Copilot Studio, Power Automate, or Azure AI Foundry).</li>
+                <li><strong>Copilot Prompt Generator:</strong> Automatically generates custom system prompts for your recommended Copilot agents.</li>
+                <li><strong>Cowork Optimizer:</strong> If the recommended tool is Cowork, it will optimize the credit/token consumption of your <code>skill.md</code> files.</li>
+                <li><strong>Live Utility:</strong> You can view and interact with Sapan's live navigator here: <a href="https://claude.ai/public/artifacts/646f5137-e716-4fa3-a24a-e33aacb6f640" target="_blank" style="color:var(--secondary); text-decoration:underline;">Wayfinder Claude Artifact</a>.</li>
+            </ul>
         `
     };
 
@@ -338,11 +349,13 @@ function initCopilotChat() {
                 <li><strong>Google:</strong> Generative AI Fundamentals</li>
                 <li><strong>Custom:</strong> Cowork Skill Creation (Custom Actions &amp; API Skills)</li>
             </ul>`;
-        }
-        if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('reach')) {
+         if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('reach')) {
             return `You can reach Sapan via email at <a href="mailto:sapanpatel1230@gmail.com" style="color:var(--secondary);">sapanpatel1230@gmail.com</a> or connect with him on <a href="https://www.linkedin.com/in/sapan-patel-807321222/" target="_blank" style="color:var(--secondary); text-decoration:underline;">LinkedIn</a>. Feel free to use the contact cards at the bottom of the page!`;
         }
-
+        if (query.includes('wayfinder') || query.includes('way finder') || query.includes('ecosystem') || query.includes('navigator') || query.includes('decision engine')) {
+            return dialogue['wayfinder'];
+        }
+ 
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
             <ul class="bullet-list">
@@ -350,6 +363,7 @@ function initCopilotChat() {
                 <li>His core <strong>tech stack</strong> (Copilot Studio, Azure, APIs)</li>
                 <li>How the <strong>Credit Optimizer</strong> saves 40% in costs</li>
                 <li>The <strong>Intelligent Audit Assistant</strong> multi-agent setup</li>
+                <li>His <strong>Wayfinder Decision Engine</strong> for Microsoft AI routing</li>
                 <li>His <strong>certifications</strong> and <strong>hackathon achievements</strong></li>
             </ul>
         `;
