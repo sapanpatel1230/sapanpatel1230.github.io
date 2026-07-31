@@ -333,7 +333,7 @@ function initCopilotChat() {
             return `Sapan holds several top AI & Cloud certifications:
             <ul class="bullet-list">
                 <li><strong>Anthropic:</strong> Claude Architect Certified (CCRF) &amp; Claude AI Fluency</li>
-                <li><strong>Microsoft:</strong> AI Transformation Leader (AB-731), AI Business Professional (AB-730), Copilot Agent Fundamentals (AB-900)</li>
+                <li><strong>Microsoft:</strong> AI Agent Builder (AB-620), AI Transformation Leader (AB-731), AI Business Professional (AB-730), Copilot Agent Fundamentals (AB-900)</li>
                 <li><strong>AWS:</strong> Prompt Engineering Foundation</li>
                 <li><strong>Google:</strong> Generative AI Fundamentals</li>
                 <li><strong>Custom:</strong> Cowork Skill Creation (Custom Actions &amp; API Skills)</li>
