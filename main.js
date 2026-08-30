@@ -315,6 +315,17 @@ function initCopilotChat() {
                 <li><strong>Multi-Source Ingestion:</strong> Dynamically generates live interactive dashboards from selected data sources such as multiple Excel spreadsheets, Word documents, and PPT slide decks.</li>
                 <li><strong>Real-time Sync:</strong> The HTML dashboard updates immediately as soon as data changes in the source Excel sheets. The user simply refreshes the HTML dashboard; there is no need to regenerate the dashboard layout.</li>
             </ul>
+        `,
+        enablement: `
+            Sapan acts as an enterprise **AI Enablement Lead & Advisor**, connecting cross-functional teams with the Microsoft AI ecosystem.
+            <br/><br/>
+            <strong>Areas of Impact:</strong>
+            <ul class="bullet-list">
+                <li><strong>Cross-Functional Alignment:</strong> Bridges Support, HR, Sales, Finance, Developers, and Executives to match custom business requirements with Microsoft AI tools.</li>
+                <li><strong>Token Credit Governance:</strong> Guides teams on saving credits through context compression, prompt rules, and local Python offloading.</li>
+                <li><strong>Autonomous Solutions:</strong> Mentors teams in converting static, passive chat interfaces into fully autonomous, self-triggering agentic loops.</li>
+                <li><strong>Ecosystem Enablement:</strong> Hosts periodic workshops and newsletters detailing security releases, governance, and updates on Copilot Studio, Azure AI Foundry, and Power Platform.</li>
+            </ul>
         `
     };
 
@@ -433,12 +444,16 @@ function initCopilotChat() {
         if (query.includes('live dashboard') || query.includes('sharepoint copilot') || query.includes('excel sync') || query.includes('dashboard generator')) {
             return dialogue['dashboard-generator'];
         }
+        if (query.includes('enablement') || query.includes('session') || query.includes('domain') || query.includes('advisory') || query.includes('workshop') || query.includes('executives') || query.includes('training')) {
+            return dialogue['enablement'];
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
             <ul class="bullet-list">
                 <li>Sapan's <strong>experience</strong> at TCS</li>
                 <li>His core <strong>tech stack</strong> (Copilot Studio, Azure, APIs)</li>
+                <li>His **Enterprise AI Enablement** and advisory work</li>
                 <li>The **Harness Atlas** AI decision engine</li>
                 <li>His **Live Dashboard Generator** SharePoint skill</li>
                 <li>His **Intelligent SOP Builder** with Mermaid diagrams</li>
