@@ -264,6 +264,48 @@ function initCopilotChat() {
                 <li><strong>Nirma University:</strong> Evaluated advanced AI systems and mentored students on scalability and cost-efficient agent architectures. LinkedIn post: <a href="https://lnkd.in/p/dX8-_KAh" target="_blank" style="color:var(--secondary); text-decoration:underline;">Nirma Post</a>.</li>
                 <li><strong>Charusat University:</strong> Judged national-level AI innovations with over 150+ students, focusing on prompt injection safety and API latency. LinkedIn post: <a href="https://lnkd.in/p/dq3w35ui" target="_blank" style="color:var(--secondary); text-decoration:underline;">Charusat Post</a>.</li>
             </ul>
+        `,
+        atlas: `
+            <strong>Harness Atlas</strong> is Sapan's AI-powered decision engine for the Microsoft AI ecosystem.
+            <br/><br/>
+            <strong>Key Features:</strong>
+            <ul class="bullet-list">
+                <li><strong>Tool Recommendation:</strong> Matches custom use cases to the correct Microsoft tool (Copilot Studio, Power Platform, Azure AI).</li>
+                <li><strong>Implementation Guide:</strong> Generates step-by-step instructions, customized prompts, and <code>skill.md</code> files.</li>
+                <li><strong>Diagram & Cost Control:</strong> Automatically constructs architecture flow diagrams and details credit optimization options.</li>
+                <li><strong>Press Feature:</strong> Featured in Kai Stenberg's LinkedIn newsletter, <a href="https://www.linkedin.com/pulse/volume-4-kai-stenberg-pykie/?trackingId=T180PboBVytn%2BrfN8LjN3g%3D%3D" target="_blank" style="color:var(--secondary); text-decoration:underline;">"Pykie"</a>.</li>
+                <li><strong>Live Utility:</strong> Try Sapan's live artifact: <a href="https://claude.ai/public/artifacts/b4e555b1-b802-4530-b531-46cc68cff5df" target="_blank" style="color:var(--secondary); text-decoration:underline;">Harness Atlas Link</a>.</li>
+            </ul>
+        `,
+        'sop-builder': `
+            Sapan's <strong>Intelligent SOP Builder</strong> helps organizations automate documentation and diagramming.
+            <br/><br/>
+            It works by:
+            <ul class="bullet-list">
+                <li>Accepting user input (topic or short process description).</li>
+                <li>Generating a formal Standard Operating Procedure as a Word document based on corporate templates.</li>
+                <li>Outputting an HTML file embedded with an interactive, dynamically rendered **Mermaid.js** workflow diagram.</li>
+            </ul>
+        `,
+        'powerbi-plugin': `
+            The <strong>Power BI Dashboard Plugin</strong> is a secure analytics tool connecting directly with Power BI.
+            <br/><br/>
+            <strong>Core Logic:</strong>
+            <ul class="bullet-list">
+                <li><strong>Access Control:</strong> Validates user credentials and handles strict rule-based access before querying databases.</li>
+                <li><strong>Dashboard Compilation:</strong> Automatically compiles raw datasets into interactive HTML reports.</li>
+                <li><strong>Slide Exporter:</strong> Includes a PPT export utility to download analytics decks formatted inside organizational presentation templates.</li>
+            </ul>
+        `,
+        'mail-responder': `
+            The <strong>Automated Mail Responder</strong> is an autonomous 24/7 inbox management system.
+            <br/><br/>
+            <strong>Flow Architecture:</strong>
+            <ul class="bullet-list">
+                <li>Monitors shared organizational mailboxes 24/7 via flow triggers in **GitHub Harness**.</li>
+                <li>Upon receiving an email, it extracts the subject and body payload.</li>
+                <li>Utilizes RAG (Retrieval-Augmented Generation) against corporate **SharePoint** knowledge bases to generate context-correct replies and threads them directly back to the sender.</li>
+            </ul>
         `
     };
 
@@ -367,17 +409,31 @@ function initCopilotChat() {
         if (query.includes('nirma') || query.includes('charusat') || query.includes('jury') || query.includes('judge') || query.includes('hackathon jury') || query.includes('university visit')) {
             return dialogue['engagements'];
         }
+        if (query.includes('atlas') || query.includes('harness atlas')) {
+            return dialogue['atlas'];
+        }
+        if (query.includes('sop') || query.includes('sop builder')) {
+            return dialogue['sop-builder'];
+        }
+        if (query.includes('power bi') || query.includes('powerbi') || query.includes('bi dashboard') || query.includes('dashboard plugin')) {
+            return dialogue['powerbi-plugin'];
+        }
+        if (query.includes('mail responder') || query.includes('automated mail') || query.includes('email responder') || query.includes('mailbox')) {
+            return dialogue['mail-responder'];
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
             <ul class="bullet-list">
                 <li>Sapan's <strong>experience</strong> at TCS</li>
                 <li>His core <strong>tech stack</strong> (Copilot Studio, Azure, APIs)</li>
+                <li>The **Harness Atlas** AI decision engine</li>
+                <li>His **Intelligent SOP Builder** with Mermaid diagrams</li>
+                <li>His **Power BI Dashboard Plugin** with access validation</li>
+                <li>His **Automated Mail Responder** 24/7 RAG flow</li>
                 <li>How the <strong>Credit Optimizer</strong> saves 40% in costs</li>
                 <li>The <strong>Intelligent Audit Assistant</strong> multi-agent setup</li>
-                <li>His <strong>Wayfinder Decision Engine</strong> for Microsoft AI routing</li>
                 <li>His **Academic Jury Visits** to Nirma &amp; Charusat Universities</li>
-                <li>His <strong>certifications</strong> and <strong>hackathon achievements</strong></li>
             </ul>
         `;
     }
