@@ -1527,6 +1527,199 @@ body {
     color: var(--text-muted);
 }
 
+/* --- ACADEMIC ENGAGEMENTS SECTION --- */
+.engagements-section {
+    background: linear-gradient(180deg, var(--bg-darker) 0%, rgba(15, 23, 42, 0.6) 100%);
+    position: relative;
+    z-index: 10;
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.engagements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+.engagement-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: var(--transition);
+}
+
+.engagement-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(6, 182, 212, 0.08);
+}
+
+.engagement-logo-container {
+    flex-shrink: 0;
+    width: 85px;
+    height: 85px;
+    background: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.university-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.engagement-content {
+    flex-grow: 1;
+}
+
+.engagement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.engagement-tag {
+    background: rgba(6, 182, 212, 0.12);
+    color: var(--secondary);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    padding: 0.25rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.engagement-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.engagement-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.engagement-sub {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.engagement-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.engagement-bullets {
+    list-style: none;
+    margin-bottom: 1.8rem;
+    padding-left: 0;
+}
+
+.engagement-bullets li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+}
+
+.engagement-bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.engagement-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    color: #c084fc;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.engagement-link-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--primary-glow);
+}
+
+.engagements-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 4rem;
+    backdrop-filter: blur(8px);
+}
+
+.e-stat-item {
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.e-stat-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.e-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.e-stat-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--border-color);
+}
+
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 1024px) {
     .hero-grid {
@@ -1563,6 +1756,10 @@ body {
     .credentials-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+    .engagements-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
@@ -2155,6 +2352,38 @@ html, body {
     .timeline-card {
         padding: 1.25rem !important;
         border-radius: 14px !important;
+    }
+    .engagement-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+    .engagement-header {
+        flex-direction: column;
+        gap: 0.4rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .engagement-bullets li {
+        padding-left: 0;
+        text-align: center;
+    }
+    .engagement-bullets li::before {
+        display: none;
+    }
+    .engagements-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .e-stat-divider {
+        width: 60px;
+        height: 1px;
+        background: var(--border-color);
+    }
+    .e-stat-item {
+        padding: 0;
     }
 }
 

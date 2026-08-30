@@ -256,6 +256,14 @@ function initCopilotChat() {
                 <li><strong>Cowork Optimizer:</strong> If the recommended tool is Cowork, it will optimize the credit/token consumption of your <code>skill.md</code> files.</li>
                 <li><strong>Live Utility:</strong> You can view and interact with Sapan's live navigator here: <a href="https://claude.ai/public/artifacts/646f5137-e716-4fa3-a24a-e33aacb6f640" target="_blank" style="color:var(--secondary); text-decoration:underline;">Wayfinder Claude Artifact</a>.</li>
             </ul>
+        `,
+        engagements: `
+            Sapan was invited as an expert **AI Hackathon Jury Member** to evaluate student projects at:
+            <br/><br/>
+            <ul class="bullet-list">
+                <li><strong>Nirma University:</strong> Evaluated advanced AI systems and mentored students on scalability and cost-efficient agent architectures. LinkedIn post: <a href="https://lnkd.in/p/dX8-_KAh" target="_blank" style="color:var(--secondary); text-decoration:underline;">Nirma Post</a>.</li>
+                <li><strong>Charusat University:</strong> Judged national-level AI innovations with over 150+ students, focusing on prompt injection safety and API latency. LinkedIn post: <a href="https://lnkd.in/p/dq3w35ui" target="_blank" style="color:var(--secondary); text-decoration:underline;">Charusat Post</a>.</li>
+            </ul>
         `
     };
 
@@ -356,6 +364,9 @@ function initCopilotChat() {
         if (query.includes('wayfinder') || query.includes('way finder') || query.includes('ecosystem') || query.includes('navigator') || query.includes('decision engine')) {
             return dialogue['wayfinder'];
         }
+        if (query.includes('nirma') || query.includes('charusat') || query.includes('jury') || query.includes('judge') || query.includes('hackathon jury') || query.includes('university visit')) {
+            return dialogue['engagements'];
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
@@ -365,6 +376,7 @@ function initCopilotChat() {
                 <li>How the <strong>Credit Optimizer</strong> saves 40% in costs</li>
                 <li>The <strong>Intelligent Audit Assistant</strong> multi-agent setup</li>
                 <li>His <strong>Wayfinder Decision Engine</strong> for Microsoft AI routing</li>
+                <li>His **Academic Jury Visits** to Nirma &amp; Charusat Universities</li>
                 <li>His <strong>certifications</strong> and <strong>hackathon achievements</strong></li>
             </ul>
         `;
