@@ -306,6 +306,15 @@ function initCopilotChat() {
                 <li>Upon receiving an email, it extracts the subject and body payload.</li>
                 <li>Utilizes RAG (Retrieval-Augmented Generation) against corporate **SharePoint** knowledge bases to generate context-correct replies and threads them directly back to the sender.</li>
             </ul>
+        `,
+        'dashboard-generator': `
+            Sapan developed the <strong>Live Dashboard Generator Skill</strong> as a custom SharePoint Copilot skill.
+            <br/><br/>
+            <strong>Core Architecture:</strong>
+            <ul class="bullet-list">
+                <li><strong>Multi-Source Ingestion:</strong> Dynamically generates live interactive dashboards from selected data sources such as multiple Excel spreadsheets, Word documents, and PPT slide decks.</li>
+                <li><strong>Real-time Sync:</strong> The HTML dashboard updates immediately as soon as data changes in the source Excel sheets. The user simply refreshes the HTML dashboard; there is no need to regenerate the dashboard layout.</li>
+            </ul>
         `
     };
 
@@ -421,6 +430,9 @@ function initCopilotChat() {
         if (query.includes('mail responder') || query.includes('automated mail') || query.includes('email responder') || query.includes('mailbox')) {
             return dialogue['mail-responder'];
         }
+        if (query.includes('live dashboard') || query.includes('sharepoint copilot') || query.includes('excel sync') || query.includes('dashboard generator')) {
+            return dialogue['dashboard-generator'];
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
@@ -428,6 +440,7 @@ function initCopilotChat() {
                 <li>Sapan's <strong>experience</strong> at TCS</li>
                 <li>His core <strong>tech stack</strong> (Copilot Studio, Azure, APIs)</li>
                 <li>The **Harness Atlas** AI decision engine</li>
+                <li>His **Live Dashboard Generator** SharePoint skill</li>
                 <li>His **Intelligent SOP Builder** with Mermaid diagrams</li>
                 <li>His **Power BI Dashboard Plugin** with access validation</li>
                 <li>His **Automated Mail Responder** 24/7 RAG flow</li>
