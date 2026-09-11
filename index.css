@@ -293,7 +293,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-bottom: 3rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 .tech-tag {
