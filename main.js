@@ -410,15 +410,19 @@ function initCopilotChat() {
         if (query.includes('experience') || query.includes('work') || query.includes('job') || query.includes('tcs')) {
             return `Sapan is currently the <strong>AI Automation Lead</strong> at TCS (May 2025 - Present), managing agent developers and client deployments. Prior to this, he was an <strong>AI Agent Developer</strong> (2023-2025) and a <strong>Software Engineer</strong> (2022-2023) where he built the IGNIO automation tool.`;
         }
-        if (query.includes('cert') || query.includes('certification') || query.includes('claude')) {
-            return `Sapan holds several top AI & Cloud certifications:
+        if (query.includes('cert') || query.includes('certification') || query.includes('claude') || query.includes('badge') || query.includes('credly')) {
+            return `Sapan holds several top AI & Cloud certifications and honors:
             <ul class="bullet-list">
+                <li><strong>Microsoft Elite:</strong> <a href="https://www.credly.com/badges/0821b782-ef1b-46cf-8460-d6ac55a606a3/public_url" target="_blank" style="color:var(--secondary); text-decoration:underline;">Frontier Transformation Engineer (Titan Badge)</a></li>
+                <li><strong>Microsoft Certifications:</strong> Agentic AI Business Solutions Architect (AB-100), Developing AI Apps and Agents on Azure (AI-103), AI Agent Builder (AB-620), Copilot Administration Fundamentals (AB-410), Copilot Agent Fundamentals (AB-900), GitHub Copilot (GH-300), AI Transformation Leader (AB-731), AI Business Professional (AB-730)</li>
                 <li><strong>Anthropic:</strong> Claude Certified Developer (CCDV-F), Claude Architect Certified (CCRF) &amp; Claude AI Fluency</li>
-                <li><strong>Microsoft:</strong> Agentic AI Business Solutions Architect (AB-100), Developing AI Apps and Agents on Azure (AI-103), AI Agent Builder (AB-620), Copilot Administration Fundamentals (AB-410), Copilot Agent Fundamentals (AB-900), GitHub Copilot (GH-300), AI Transformation Leader (AB-731), AI Business Professional (AB-730)</li>
                 <li><strong>AWS:</strong> Prompt Engineering Foundation</li>
                 <li><strong>Google:</strong> Generative AI Fundamentals</li>
                 <li><strong>Custom:</strong> Cowork Skill Creation (Custom Actions &amp; API Skills)</li>
             </ul>`;
+        }
+        if (query.includes('titan') || query.includes('frontier') || query.includes('transformation engineer')) {
+            return `Sapan has earned the prestigious <strong>Frontier Transformation Engineer (Titan Badge)</strong> issued by <strong>Microsoft</strong>, recognizing advanced expertise in designing, building, and deploying production-ready agentic AI solutions across Copilot Studio, Microsoft Foundry, Microsoft Fabric, and agent technologies.<br/><br/>Verified credential: <a href="https://www.credly.com/badges/0821b782-ef1b-46cf-8460-d6ac55a606a3/public_url" target="_blank" style="color:var(--secondary); text-decoration:underline;">View on Credly</a>.`;
         }
         if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('reach')) {
             return `You can reach Sapan via email at <a href="mailto:sapanpatel1230@gmail.com" style="color:var(--secondary);">sapanpatel1230@gmail.com</a> or connect with him on <a href="https://www.linkedin.com/in/sapan-patel-807321222/" target="_blank" style="color:var(--secondary); text-decoration:underline;">LinkedIn</a>. Feel free to use the contact cards at the bottom of the page!`;
