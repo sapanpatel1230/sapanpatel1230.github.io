@@ -210,10 +210,11 @@ function initCopilotChat() {
         'tech-stack': `
             Sapan's core enterprise tech stack consists of:
             <ul class="bullet-list">
-                <li><strong>AI Core:</strong> Microsoft Copilot Studio, Azure AI Foundry, OpenAI API, Anthropic Claude, Prompt Engineering.</li>
-                <li><strong>Enterprise Integration:</strong> Model Context Protocol (MCP), Power Platform (Power Automate, Power Apps), Dataverse, SAP Gateway APIs.</li>
-                <li><strong>Developer Core:</strong> JavaScript/TypeScript, Python, SVG/Canvas, HTML/CSS.</li>
-                <li><strong>Governance:</strong> Responsible AI frameworks, Token & Cost Optimization algorithms.</li>
+                <li><strong>Copilot &amp; Agentic Platforms:</strong> Copilot Studio (GitHub &amp; Standard Harness), Agentic Flow, Multi-Agent Orchestration, SPFx Copilot Components.</li>
+                <li><strong>Microsoft AI &amp; Cloud:</strong> Azure AI, AI Foundry, Power Platform, Power Automate.</li>
+                <li><strong>Custom Agentic Tools:</strong> Cowork (Skills + Plugins), Cowork App Building, Model Context Protocol (MCP Connection).</li>
+                <li><strong>Developer Core:</strong> JavaScript/TypeScript, Python, Yeoman, SVG/Canvas, HTML/CSS.</li>
+                <li><strong>Governance &amp; Optimization:</strong> AI Credit &amp; Token Cost Reduction, Responsible AI, Deterministic offloading.</li>
             </ul>
         `,
         'credit-optimizer': `
