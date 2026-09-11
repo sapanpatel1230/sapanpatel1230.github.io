@@ -326,6 +326,16 @@ function initCopilotChat() {
                 <li><strong>Autonomous Solutions:</strong> Mentors teams in converting static, passive chat interfaces into fully autonomous, self-triggering agentic loops.</li>
                 <li><strong>Ecosystem Enablement:</strong> Hosts periodic workshops and newsletters detailing security releases, governance, and updates on Copilot Studio, Azure AI Foundry, and Power Platform.</li>
             </ul>
+        `,
+        'spfx-copilot': `
+            Sapan developed <strong>SPFx Copilot Component Workbench UX Apps</strong> to create interactive interfaces and widgets for Microsoft Copilot agents.
+            <br/><br/>
+            <strong>Key Capabilities:</strong>
+            <ul class="bullet-list">
+                <li><strong>Yeoman Scaffolding:</strong> Built extensible client-side web parts and Copilot components with Microsoft's Yeoman generator (<code>@microsoft/generator-sharepoint</code>).</li>
+                <li><strong>Interactive Widgets:</strong> Created interactive UI widgets that seamlessly integrate into the Copilot workbench and modern SharePoint experiences.</li>
+                <li><strong>Agent UI Integration:</strong> Bridges backend Copilot agent logic with responsive frontend widgets for real-time user interaction.</li>
+            </ul>
         `
     };
 
@@ -451,12 +461,16 @@ function initCopilotChat() {
         if (query.includes('enablement') || query.includes('session') || query.includes('domain') || query.includes('advisory') || query.includes('workshop') || query.includes('executives') || query.includes('training')) {
             return dialogue['enablement'];
         }
+        if (query.includes('spfx') || query.includes('workbench') || query.includes('yeoman') || query.includes('widget') || query.includes('copilot component')) {
+            return dialogue['spfx-copilot'];
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
             <ul class="bullet-list">
                 <li>Sapan's <strong>experience</strong> at TCS</li>
                 <li>His core <strong>tech stack</strong> (Copilot Studio, Azure, APIs)</li>
+                <li>His **SPFx Copilot Workbench UX Apps** and widgets</li>
                 <li>His **Enterprise AI Enablement** and advisory work</li>
                 <li>The **Harness Atlas** AI decision engine</li>
                 <li>His **Live Dashboard Generator** SharePoint skill</li>
