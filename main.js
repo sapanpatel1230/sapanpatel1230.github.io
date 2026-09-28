@@ -337,6 +337,17 @@ function initCopilotChat() {
                 <li><strong>Interactive Widgets:</strong> Created interactive UI widgets that seamlessly integrate into the Copilot workbench and modern SharePoint experiences.</li>
                 <li><strong>Agent UI Integration:</strong> Bridges backend Copilot agent logic with responsive frontend widgets for real-time user interaction.</li>
             </ul>
+        `,
+        'security-research': `
+            Sapan authored the <strong>Prompt Propagation Firewall (PPF)</strong> research architecture defending against <strong>Self-Replicating Prompt Injections (AI Worms)</strong> in Microsoft Copilot, Copilot Studio, Azure AI Foundry, and MCP.
+            <br/><br/>
+            <strong>Key Highlights:</strong>
+            <ul class="bullet-list">
+                <li><strong>Threat Model:</strong> Translates OpenAI's September 2026 red-team alignment findings into Microsoft enterprise environments (how injected emails/tickets persist carriers across SharePoint and Teams to infect downstream agents).</li>
+                <li><strong>7-Layer Control Plane:</strong> Deterministic security via Prompt Shield, Provenance Tagger, Agent Warden, Tool Policy, Action Gate, and Audit Lineage.</li>
+                <li><strong>Replication Risk Formula:</strong> Evaluates <code>R = S + I + P + W + X &ge; 8</code> to block persistent writes before enterprise storage corruption.</li>
+                <li><strong>Interactive Security Lab:</strong> Test the live threat simulator, interactive risk calculator, and read the full whitepaper: <a href="prompt-propagation-firewall.html" class="highlight-label" style="color:var(--secondary); text-decoration:underline;">Prompt Propagation Firewall Interactive Lab &rarr;</a></li>
+            </ul>
         `
     };
 
@@ -414,6 +425,9 @@ function initCopilotChat() {
         }
         if (query.includes('publication') || query.includes('paper') || query.includes('neural') || query.includes('bnn') || query.includes('research')) {
             return dialogue['publications'];
+        }
+        if (query.includes('security') || query.includes('firewall') || query.includes('prompt injection') || query.includes('worm') || query.includes('ppf') || query.includes('threat') || query.includes('red team')) {
+            return dialogue['security-research'];
         }
         if (query.includes('hackathon') || query.includes('tcs ai fridays') || query.includes('winner') || query.includes('award') || query.includes('win')) {
             return dialogue['hackathons'];
