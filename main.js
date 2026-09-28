@@ -347,7 +347,7 @@ function initCopilotChat() {
                 <li><strong>Threat Model:</strong> Translates OpenAI's September 2026 red-team alignment findings into Microsoft enterprise environments (how injected emails/tickets persist carriers across SharePoint and Teams to infect downstream agents).</li>
                 <li><strong>7-Layer Control Plane:</strong> Deterministic security via Ingestion Classifier, Provenance Tagger, Plan Drift Validator, Tool Policy, Action Gate, and Audit Lineage.</li>
                 <li><strong>Replication Risk Formula:</strong> Evaluates <code>R = S + I + P + W + X &ge; 8</code> to block persistent writes before enterprise storage corruption.</li>
-                <li><strong>Interactive Security Lab:</strong> Test the live threat simulator, interactive risk calculator, and read the full whitepaper: <a href="prompt-propagation-firewall.html" class="highlight-label" style="color:var(--secondary); text-decoration:underline;">Prompt Propagation Firewall Interactive Lab &rarr;</a></li>
+                <li><strong>Interactive Security Lab:</strong> Test the live threat simulator, interactive risk calculator, and read the full whitepaper: <a href="prompt-propagation-firewall.html?v=9.0" class="highlight-label" style="color:var(--secondary); text-decoration:underline;">Prompt Propagation Firewall Interactive Lab &rarr;</a></li>
             </ul>
         `
     };

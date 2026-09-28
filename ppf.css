@@ -2322,3 +2322,122 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.78rem;
     }
 }
+
+/* Mail Action Toast / Direct Fallback */
+.mail-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--primary-glow);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    z-index: 99999;
+    backdrop-filter: blur(16px);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 90vw;
+    font-family: var(--font-body);
+}
+
+.mail-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.mail-toast-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.mail-toast-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.mail-toast-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.mail-toast-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.mail-toast-btn {
+    padding: 0.45rem 0.95rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
+.mail-toast-btn-gmail {
+    background: #ea4335;
+    color: #fff !important;
+}
+
+.mail-toast-btn-gmail:hover {
+    background: #d93025;
+    transform: translateY(-1px);
+}
+
+.mail-toast-btn-copy {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.mail-toast-btn-copy:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.mail-toast-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+.mail-toast-close:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+    .mail-toast {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.85rem;
+        bottom: 1rem;
+        padding: 1.1rem;
+    }
+    .mail-toast-actions {
+        margin-left: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDefenseChatbot();
     initSmoothScroll();
     initMobileMenu();
+    initMailAdvisory();
 });
 
 /* ==========================================================================
@@ -688,3 +689,66 @@ function initMobileMenu() {
         }
     });
 }
+
+/* ==========================================================================
+   9. Advisory Email Smart Redirection & Fallback
+   ========================================================================== */
+function initMailAdvisory() {
+    const inquireBtn = document.getElementById('inquire-advisory-btn');
+    if (!inquireBtn) return;
+
+    const email = 'sapanpatel1230@gmail.com';
+    const subject = encodeURIComponent('Enterprise AI Security Advisory Inquiry');
+    const mailtoUrl = `mailto:${email}?subject=${subject}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+
+    inquireBtn.addEventListener('click', (e) => {
+        // Trigger mail client via mailto
+        window.location.href = mailtoUrl;
+
+        // Display instant floating helper offering direct Web Gmail & Copy Address
+        showMailToast(gmailUrl, email);
+    });
+}
+
+function showMailToast(gmailUrl, email) {
+    let toast = document.getElementById('mail-redirect-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'mail-redirect-toast';
+        toast.className = 'mail-toast';
+        toast.innerHTML = `
+            <div class="mail-toast-content">
+                <div class="mail-toast-title"><i class="fa-solid fa-envelope" style="color:var(--primary);"></i> Opening Email Client...</div>
+                <div class="mail-toast-desc">${email}</div>
+            </div>
+            <div class="mail-toast-actions">
+                <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="mail-toast-btn mail-toast-btn-gmail"><i class="fa-brands fa-google"></i> Open in Gmail</a>
+                <button class="mail-toast-btn mail-toast-btn-copy" id="mail-toast-copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+                <button class="mail-toast-close" id="mail-toast-close-btn" aria-label="Close">&times;</button>
+            </div>
+        `;
+        document.body.appendChild(toast);
+
+        toast.querySelector('#mail-toast-copy-btn').addEventListener('click', function() {
+            navigator.clipboard.writeText(email);
+            this.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
+            }, 2000);
+        });
+
+        toast.querySelector('#mail-toast-close-btn').addEventListener('click', () => {
+            toast.classList.remove('show');
+        });
+    }
+
+    // Show toast
+    setTimeout(() => toast.classList.add('show'), 50);
+
+    // Auto dismiss after 10 seconds
+    setTimeout(() => {
+        if (toast) toast.classList.remove('show');
+    }, 10000);
+}
+
