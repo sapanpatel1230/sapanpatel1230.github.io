@@ -84,7 +84,7 @@ function initCyberGrid() {
 }
 
 /* ==========================================================================
-   2. Interactive Simulated Multi-Hop Attack Explorer (PDF 1 Section 4)
+   2. Interactive Simulated Multi-Hop Attack Explorer
    ========================================================================== */
 const attackStagesData = {
     1: {
@@ -199,7 +199,7 @@ function initSimulatedAttack() {
 }
 
 /* ==========================================================================
-   3. Architecture Layer Inspector (PDF 2 Section 1 & 2)
+   3. Architecture Layer Inspector
    ========================================================================== */
 const architectureLayerDetails = {
     'prompt-shield': {
@@ -284,7 +284,7 @@ function initArchitectureInspector() {
 }
 
 /* ==========================================================================
-   4. Interactive Replication Risk Calculator (PDF 2 Section 5)
+   4. Interactive Replication Risk Calculator
    Formula: R = S + I + P + W + X
    ========================================================================== */
 function initRiskCalculator() {
@@ -356,7 +356,7 @@ function initRiskCalculator() {
 }
 
 /* ==========================================================================
-   5. Red-Team Test Scenarios Tabs (PDF 2 Section 8 & 9)
+   5. Red-Team Test Scenarios Tabs
    ========================================================================== */
 function initRedTeamTabs() {
     const tabButtons = document.querySelectorAll('.scenario-tab-btn');

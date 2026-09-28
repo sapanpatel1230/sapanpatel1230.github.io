@@ -44,6 +44,19 @@
     box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+pre, code, kbd, samp {
+    font-family: var(--font-mono);
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -625,13 +638,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Section 1: AI Worm & Propagation Mechanics (PDF 1)
+   Section 1: AI Worm & Propagation Mechanics
    ========================================================================== */
 .dual-col-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
     align-items: start;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.threat-explanation-card,
+.worm-loop-visual {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 .threat-explanation-card {
@@ -763,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Interactive Simulation of Priya's Supplier Attack (PDF 1 Section 4)
+   Interactive Simulation of Priya's Supplier Attack
    ========================================================================== */
 .simulation-box {
     background: var(--bg-card);
@@ -807,9 +830,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .sim-stage-content {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 2rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .sim-card {
@@ -817,6 +843,10 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.6rem;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .sim-card-title {
@@ -839,8 +869,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: #cbd5e1;
-    overflow-x: auto;
     line-height: 1.55;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden;
 }
 
 .sim-code-preview .highlight-injection {
@@ -857,6 +892,9 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 .sim-verdict-box {
@@ -937,15 +975,22 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .plan-drift-comparison {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .plan-card {
     border-radius: 14px;
     padding: 2rem;
     backdrop-filter: blur(10px);
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .plan-card.expected {
@@ -1022,7 +1067,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Section 4: Prompt Propagation Firewall (PPF) 7-Layer Architecture (PDF 2)
+   Section 4: Prompt Propagation Firewall (PPF) 7-Layer Architecture
    ========================================================================== */
 .architecture-visual-wrapper {
     background: var(--bg-card);
@@ -1215,9 +1260,18 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 16px;
     padding: 2.5rem;
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
     gap: 2.5rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.calculator-container > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 .calc-formula-display {
@@ -1419,13 +1473,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Section 8: Red-Team Test Scenarios & Matrix (PDF 2 Section 8 & 9)
+   Section 8: Red-Team Test Scenarios & Matrix
    ========================================================================== */
 .redteam-box {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 2.2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .scenario-tabs {
@@ -1435,6 +1493,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .scenario-tab-btn {
@@ -1458,6 +1518,8 @@ h1, h2, h3, h4, h5, h6 {
 .scenario-panel {
     display: none;
     animation: fadeIn 0.3s ease;
+    width: 100%;
+    max-width: 100%;
 }
 
 .scenario-panel.active {
@@ -1466,8 +1528,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .scenario-details-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .scenario-block {
@@ -1475,6 +1540,12 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.6rem;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .scenario-block h4 {
@@ -1486,6 +1557,24 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.scenario-block p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+
+.scenario-block pre,
+.scenario-block .sim-code-preview {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .scenario-block.payload h4 { color: #f87171; }
@@ -1499,10 +1588,19 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-interface-panel,
+.telemetry-terminal-panel {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
 
 /* Chat Interface Side */
@@ -1954,6 +2052,18 @@ h1, h2, h3, h4, h5, h6 {
     }
     .decision-pipeline-grid {
         grid-template-columns: 1fr;
+    }
+    .redteam-box {
+        padding: 1.25rem;
+    }
+    .scenario-block {
+        padding: 1.1rem;
+    }
+    .calculator-container {
+        padding: 1.25rem;
+    }
+    .threat-explanation-card {
+        padding: 1.25rem;
     }
 }
 
