@@ -12,7 +12,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="ppf.css?v=1.0">
+    <link rel="stylesheet" href="ppf.css?v=2.0">
 </head>
 <body>
     <!-- Background Animated Cyber Canvas -->
@@ -21,30 +21,52 @@
     <!-- Top Sticky Lab Header -->
     <header class="lab-header">
         <div class="container lab-header-content">
-            <div class="brand-group">
-                <a href="index.html" class="back-portfolio-link">
-                    <i class="fa-solid fa-arrow-left"></i> Portfolio
+            <!-- Left: Brand & Back to Portfolio -->
+            <div class="lab-brand-group">
+                <a href="index.html" class="back-portfolio-link" title="Return to Sapan Patel Portfolio">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Portfolio</span>
                 </a>
-                <div class="lab-title-badge">
-                    <span class="sec-pill">AI SECURITY LAB</span>
-                    <span>Prompt Propagation Firewall</span>
-                </div>
+                <span class="brand-sep">/</span>
+                <a href="#" class="lab-brand-badge">
+                    <span class="lab-brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span class="lab-brand-name">PPF <span class="accent-text">Security Lab</span></span>
+                </a>
             </div>
-            <nav class="lab-nav">
-                <a href="#threat-model">AI Worm Threat</a>
+
+            <!-- Center: Clean, Non-wrapping Nav (6 key anchors) -->
+            <nav class="lab-nav" id="lab-nav">
+                <a href="#threat-model">Threat Model</a>
                 <a href="#attack-surface">Attack Surface</a>
-                <a href="#simulated-scenario">Simulation</a>
-                <a href="#architecture">PPF Control Plane</a>
-                <a href="#trust-model">Trust Model</a>
-                <a href="#risk-calculator">Risk Calculator</a>
-                <a href="#red-team">Red-Team Lab</a>
-                <a href="#live-demo" class="active">Live Chatbot Demo</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#risk-calculator">Risk Engine</a>
+                <a href="#red-team">Red Team</a>
+                <a href="#live-demo">Live Demo</a>
             </nav>
-            <div class="header-action">
+
+            <!-- Right: Action CTA & Mobile Menu Toggle -->
+            <div class="lab-header-actions">
                 <a href="#live-demo" class="header-action-btn">
-                    <i class="fa-solid fa-play"></i> Test Simulator
+                    <span class="pulse-indicator"></span>
+                    <span>Live Simulator</span>
+                    <i class="fa-solid fa-terminal"></i>
                 </a>
+                <button class="lab-menu-toggle" id="lab-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="lab-mobile-drawer" id="lab-mobile-drawer">
+            <a href="index.html" class="mobile-drawer-link"><i class="fa-solid fa-arrow-left"></i> Return to Portfolio</a>
+            <a href="#threat-model" class="mobile-drawer-link">AI Worm Threat Model</a>
+            <a href="#attack-surface" class="mobile-drawer-link">Enterprise Attack Surfaces</a>
+            <a href="#architecture" class="mobile-drawer-link">PPF Control Plane Architecture</a>
+            <a href="#trust-model" class="mobile-drawer-link">5-Tier Trust Model</a>
+            <a href="#risk-calculator" class="mobile-drawer-link">Risk Score Calculator (R=S+I+P+W+X)</a>
+            <a href="#red-team" class="mobile-drawer-link">Red-Team Test Suite</a>
+            <a href="#live-demo" class="mobile-drawer-link highlight"><i class="fa-solid fa-play"></i> Launch Live Defense Chatbot</a>
         </div>
     </header>
 
@@ -965,7 +987,7 @@ Agent-B: Ingests Agent-A's output to calculate monthly billing.</pre>
                     <div class="telemetry-terminal-panel">
                         <div class="terminal-header">
                             <div class="terminal-title">
-                                <i class="fa-solid fa-terminal"></i> PPF REAL-TIME SECURITY TELEMETRY
+                                <i class="fa-solid fa-terminal"></i> Live Security Telemetry
                             </div>
                             <span class="terminal-indicator" title="Engine Active"></span>
                         </div>

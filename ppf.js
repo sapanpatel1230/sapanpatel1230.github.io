@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRedTeamTabs();
     initDefenseChatbot();
     initSmoothScroll();
+    initMobileMenu();
 });
 
 /* ==========================================================================
@@ -606,6 +607,12 @@ function escapeHtml(str) {
 }
 
 function initSmoothScroll() {
+    const navLinks = document.querySelectorAll('.lab-nav a[href^="#"]');
+    const sections = Array.from(navLinks).map(link => {
+        const id = link.getAttribute('href');
+        return document.querySelector(id);
+    }).filter(Boolean);
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -616,5 +623,68 @@ function initSmoothScroll() {
                 targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
+    });
+
+    // Active link highlighting on scroll
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        const scrollPos = window.scrollY + 120;
+
+        sections.forEach(sec => {
+            if (sec && sec.offsetTop <= scrollPos) {
+                currentSection = '#' + sec.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentSection) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }, { passive: true });
+}
+
+function initMobileMenu() {
+    const toggleBtn = document.getElementById('lab-menu-toggle');
+    const drawer = document.getElementById('lab-mobile-drawer');
+    if (!toggleBtn || !drawer) return;
+
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        drawer.classList.toggle('open');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+            if (drawer.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+
+    drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            drawer.classList.remove('open');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+            drawer.classList.remove('open');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
     });
 }
