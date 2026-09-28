@@ -1581,7 +1581,7 @@ h1, h2, h3, h4, h5, h6 {
 .scenario-block.defense h4 { color: #34d399; }
 
 /* ==========================================================================
-   Section 9: Live Interactive Security Demo Chatbot (The PPF Agent Warden)
+   Section 9: Live Interactive Security Demo Chatbot (The PPF Control Plane)
    ========================================================================== */
 .chatbot-lab-container {
     background: var(--bg-card);

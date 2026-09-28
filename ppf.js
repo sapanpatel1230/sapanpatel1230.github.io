@@ -203,10 +203,10 @@ function initSimulatedAttack() {
    ========================================================================== */
 const architectureLayerDetails = {
     'prompt-shield': {
-        name: "Layer 1: Prompt Shield",
+        name: "Layer 1: Ingestion Classifier & Semantic Gate",
         responsibility: "Detect likely prompt injections, classify sources, and evaluate instruction-like syntax in retrieved contexts.",
         keyQuestion: "Is this content trying to act like instructions?",
-        msMapping: "Microsoft Defender for Cloud Apps + Azure AI Content Safety Prompt Shields + Purview data labeling.",
+        msMapping: "Microsoft Defender for Cloud Apps + Azure AI Content Safety + Purview data labeling.",
         color: "blue"
     },
     'provenance-engine': {
@@ -217,7 +217,7 @@ const architectureLayerDetails = {
         color: "purple"
     },
     'agent-warden': {
-        name: "Layer 3: Agent Warden & Plan Validator",
+        name: "Layer 3: Plan-Drift Validator & Intent Guard",
         responsibility: "Validate agent intent, detect plan drift, inspect planned tool chains against original user intent, and verify instruction/data boundaries.",
         keyQuestion: "Is the agent still doing what the user originally requested, or has the plan mutated?",
         msMapping: "Semantic Kernel filter / LangChain guardrail before model execution in Azure AI Foundry.",
@@ -378,7 +378,7 @@ function initRedTeamTabs() {
 }
 
 /* ==========================================================================
-   6. Live Interactive PPF Security Demo Chatbot (The PPF Agent Warden)
+   6. Live Interactive PPF Security Demo Chatbot (The PPF Control Plane)
    ========================================================================== */
 const prebuiltScenarios = {
     'email-worm': {
@@ -517,14 +517,14 @@ function initDefenseChatbot() {
 
         setTimeout(() => {
             if (data.injectedContent && !data.injectedContent.includes('no instruction')) {
-                addTerminalLog('PROMPT_SHIELD', `Instruction Signature Detected in External Context: "${data.injectedContent}"`, 'danger');
+                addTerminalLog('INGEST_CLASSIFIER', `Instruction Signature Detected in External Context: "${data.injectedContent}"`, 'danger');
             } else {
-                addTerminalLog('PROMPT_SHIELD', 'Prompt Shield Scan: No injection signatures found in context.', 'success');
+                addTerminalLog('INGEST_CLASSIFIER', 'Ingestion Scan: No injection signatures found in context.', 'success');
             }
         }, 350);
 
         setTimeout(() => {
-            addTerminalLog('WARDEN', `Plan Drift Analysis: ${data.driftedIntent}`, data.scores.Total > 4 ? 'warn' : 'info');
+            addTerminalLog('PLAN_DRIFT', `Plan Drift Analysis: ${data.driftedIntent}`, data.scores.Total > 4 ? 'warn' : 'info');
             addTerminalLog('RISK_ENGINE', `Formula Evaluation: S(${data.scores.S}) + I(${data.scores.I}) + P(${data.scores.P}) + W(${data.scores.W}) + X(${data.scores.X}) = ${data.scores.Total} / 10`, data.scores.Total >= 8 ? 'danger' : 'info');
         }, 750);
 
@@ -554,7 +554,7 @@ function initDefenseChatbot() {
     function appendMessage(sender, text) {
         const bubble = document.createElement('div');
         bubble.className = `chat-bubble ${sender}`;
-        const senderLabel = sender === 'user' ? 'You (Enterprise User)' : (currentMode === 'protected' ? 'Copilot + PPF Warden' : 'Copilot (Unprotected)');
+        const senderLabel = sender === 'user' ? 'You (Enterprise User)' : (currentMode === 'protected' ? 'Copilot + PPF Guard' : 'Copilot (Unprotected)');
         bubble.innerHTML = `<div class="bubble-sender">${senderLabel}</div><div class="bubble-body">${escapeHtml(text)}</div>`;
         messagesContainer.appendChild(bubble);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
