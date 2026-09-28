@@ -2880,26 +2880,46 @@ html, body {
         padding: 1.8rem;
     }
 
+    .security-research-section {
+        padding: 3.5rem 0;
+    }
+
     .sec-research-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .sec-research-card {
-        padding: 1.75rem;
+        padding: 1.5rem;
     }
 
     .sec-research-heading {
-        font-size: 1.45rem;
+        font-size: 1.35rem;
+    }
+
+    .sec-research-lead {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .sec-research-features {
         grid-template-columns: 1fr;
     }
 
+    .sec-research-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
     .sec-research-actions .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .spb-line {
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
     }
 }
 
@@ -2946,6 +2966,57 @@ html, body {
 
     .certs-grid {
         grid-template-columns: 1fr;
+    }
+
+    .sec-research-card {
+        padding: 1.2rem;
+        border-radius: 14px;
+    }
+
+    .sec-research-badge {
+        font-size: 0.72rem;
+        padding: 0.3rem 0.65rem;
+    }
+
+    .sec-research-heading {
+        font-size: 1.2rem;
+    }
+
+    .sec-research-lead {
+        font-size: 0.9rem;
+    }
+
+    .sec-research-quote {
+        font-size: 0.85rem;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .srf-item {
+        padding: 0.85rem;
+    }
+
+    .spb-header {
+        padding: 0.65rem 0.85rem;
+        gap: 0.5rem;
+    }
+
+    .spb-title {
+        font-size: 0.7rem;
+    }
+
+    .spb-body {
+        padding: 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .spb-footer {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .spb-meta-col {
+        min-width: 45%;
     }
 }
 
