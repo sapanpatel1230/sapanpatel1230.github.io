@@ -336,6 +336,7 @@ function initCopilotChat() {
                 <li><strong>Yeoman Scaffolding:</strong> Built extensible client-side web parts and Copilot components with Microsoft's Yeoman generator (<code>@microsoft/generator-sharepoint</code>).</li>
                 <li><strong>Interactive Widgets:</strong> Created interactive UI widgets that seamlessly integrate into the Copilot workbench and modern SharePoint experiences.</li>
                 <li><strong>Agent UI Integration:</strong> Bridges backend Copilot agent logic with responsive frontend widgets for real-time user interaction.</li>
+                <li><strong>LinkedIn Post &amp; Demo:</strong> View the live walkthrough on LinkedIn: <a href="https://lnkd.in/p/dha7fptx" target="_blank" rel="noopener noreferrer" style="color:var(--secondary); text-decoration:underline;">SPFx Copilot Workbench Demo &rarr;</a></li>
             </ul>
         `,
         'security-research': `
