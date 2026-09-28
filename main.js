@@ -210,7 +210,7 @@ function initCopilotChat() {
         'tech-stack': `
             Sapan's core enterprise tech stack consists of:
             <ul class="bullet-list">
-                <li><strong>Copilot &amp; Agentic Platforms:</strong> Copilot Studio (GitHub &amp; Standard Harness), Agentic Flow, Multi-Agent Orchestration, SPFx Copilot Components.</li>
+                <li><strong>Copilot &amp; Agentic Platforms:</strong> Copilot Studio (GitHub &amp; Standard Harness), Copilot Code, Autopilot, Agentic Flow, Multi-Agent Orchestration, SPFx Copilot Components.</li>
                 <li><strong>Microsoft AI &amp; Cloud:</strong> Azure AI, AI Foundry, Power Platform, Power Automate.</li>
                 <li><strong>Custom Agentic Tools:</strong> Cowork (Skills + Plugins), Cowork App Building, Model Context Protocol (MCP Connection).</li>
                 <li><strong>Developer Core:</strong> JavaScript/TypeScript, Python, Yeoman, SVG/Canvas, HTML/CSS.</li>
