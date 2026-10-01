@@ -1367,6 +1367,264 @@ a.cert-card {
     letter-spacing: 0.3px;
 }
 
+/* --- UNIFIED OPENAI CHATGPT EXPERT CARD --- */
+.cert-card-unified-expert {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.08) 0%, rgba(16, 185, 129, 0.05) 50%, rgba(139, 92, 246, 0.07) 100%);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    border-radius: 16px;
+    padding: 1.4rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 25px rgba(234, 179, 8, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.cert-card-unified-expert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #eab308, #10b981, #06b6d4, #8b5cf6);
+}
+
+.cert-card-unified-expert:hover {
+    border-color: rgba(234, 179, 8, 0.65);
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.11) 0%, rgba(16, 185, 129, 0.07) 50%, rgba(139, 92, 246, 0.09) 100%);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45), 0 0 35px rgba(234, 179, 8, 0.18);
+    transform: translateY(-2px);
+}
+
+.cert-unified-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cert-unified-badge-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.22) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.cert-unified-badge-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(234, 179, 8, 0.4));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-card-unified-expert:hover .cert-unified-badge-img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.cert-unified-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.cert-unified-meta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.35rem;
+}
+
+.cert-unified-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cert-verify-openai {
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34d399;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+}
+
+.cert-unified-meta-sub {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem 1.4rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.cert-unified-meta-sub span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cert-sub-credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.cert-sub-credential-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.15rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.cert-sub-credential-item:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(234, 179, 8, 0.35);
+    transform: translateX(3px);
+}
+
+.cert-sub-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cert-sub-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.cert-sub-bullet {
+    color: #eab308;
+    font-size: 0.88rem;
+    flex-shrink: 0;
+}
+
+.cert-sub-name {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.cert-sub-validity {
+    font-size: 0.76rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.25rem;
+    padding-left: 1.45rem;
+}
+
+.cert-sub-validity strong {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.cert-sub-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.cert-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.cert-action-btn.btn-view {
+    background: rgba(56, 189, 248, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.cert-action-btn.btn-view:hover {
+    background: rgba(56, 189, 248, 0.24);
+    color: #ffffff;
+    border-color: #38bdf8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(56, 189, 248, 0.25);
+}
+
+.cert-action-btn.btn-download {
+    background: rgba(234, 179, 8, 0.12);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.cert-action-btn.btn-download:hover {
+    background: rgba(234, 179, 8, 0.24);
+    color: #ffffff;
+    border-color: #facc15;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(234, 179, 8, 0.25);
+}
+
+@media (max-width: 640px) {
+    .cert-unified-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+    .cert-sub-credential-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .cert-sub-validity {
+        padding-left: 0;
+    }
+    .cert-sub-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    .cert-sub-actions .cert-action-btn {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .education-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);

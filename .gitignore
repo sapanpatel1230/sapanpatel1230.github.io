@@ -44,3 +44,7 @@ jspm_packages/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Media files
+*.mp4
+intro-video.mp4
