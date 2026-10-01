@@ -457,7 +457,7 @@ function initCopilotChat() {
                 <li><strong>ChatGPT Deployment Practitioner</strong> (Valid through Sep 30, 2027)</li>
                 <li><strong>OpenAI Consultative Solutions Practitioner</strong> (Valid through Sep 30, 2027)</li>
             </ul>
-            Official PDF certificates can be viewed and downloaded directly in the <a href="#credentials" style="color:var(--secondary); text-decoration:underline;">Credentials section</a>.`;
+            Official PDF certificates can be viewed directly in the <a href="#credentials" style="color:var(--secondary); text-decoration:underline;">Credentials section</a>.`;
         }
         if (query.includes('titan') || query.includes('frontier') || query.includes('transformation engineer')) {
             return `Sapan has earned the prestigious <strong>Frontier Transformation Engineer (Titan Badge)</strong> issued by <strong>Microsoft</strong>, recognizing advanced expertise in designing, building, and deploying production-ready agentic AI solutions across Copilot Studio, Microsoft Foundry, Microsoft Fabric, and agent technologies.<br/><br/>Verified credential: <a href="https://www.credly.com/badges/0821b782-ef1b-46cf-8460-d6ac55a606a3/public_url" target="_blank" style="color:var(--secondary); text-decoration:underline;">View on Credly</a>.`;
