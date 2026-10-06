@@ -497,6 +497,9 @@ function initCopilotChat() {
         if (query.includes('spfx') || query.includes('workbench') || query.includes('yeoman') || query.includes('widget') || query.includes('copilot component')) {
             return dialogue['spfx-copilot'];
         }
+        if (query.includes('pilot of copilot') || query.includes('pilot') || query.includes('tagline')) {
+            return `<strong>"Pilot of CoPilot"</strong> represents Sapan's leadership in directing, orchestrating, and mastering Microsoft Copilot Studio and autonomous multi-agent architectures—acting as the guiding pilot who navigates enterprise AI systems into reliable, cost-effective production.`;
+        }
  
         return `
             I parsed your query, but could you clarify? I am trained on Sapan's portfolio details. You can ask about:
