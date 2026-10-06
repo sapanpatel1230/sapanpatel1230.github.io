@@ -441,11 +441,14 @@ function initCopilotChat() {
             <ul class="bullet-list">
                 <li><strong>OpenAI / ChatGPT:</strong> <strong>ChatGPT Expert (All Levels Achieved)</strong> &bull; ChatGPT Solutions Practitioner, OpenAI Technical Practitioner, ChatGPT Deployment Practitioner, OpenAI Consultative Solutions Practitioner (Valid through Sep 30, 2027)</li>
                 <li><strong>Microsoft Elite:</strong> <a href="https://www.credly.com/badges/0821b782-ef1b-46cf-8460-d6ac55a606a3/public_url" target="_blank" style="color:var(--secondary); text-decoration:underline;">Frontier Transformation Engineer (Titan Badge)</a></li>
-                <li><strong>Microsoft Certifications:</strong> Agentic AI Business Solutions Architect (AB-100), Developing AI Apps and Agents on Azure (AI-103), AI Agent Builder (AB-620), Copilot Administration Fundamentals (AB-410), Copilot Agent Fundamentals (AB-900), GitHub Copilot (GH-300), AI Transformation Leader (AB-731), AI Business Professional (AB-730)</li>
+                <li><strong>Microsoft Certifications:</strong> Multi-Agent AI Solutions Expert (AI-500), Agentic AI Business Solutions Architect (AB-100), Developing AI Apps and Agents on Azure (AI-103), AI Agent Builder (AB-620), Copilot Administration Fundamentals (AB-410), Copilot Agent Fundamentals (AB-900), GitHub Copilot (GH-300), AI Transformation Leader (AB-731), AI Business Professional (AB-730)</li>
                 <li><strong>Anthropic:</strong> Claude Certified Developer (CCDV-F), Claude Architect Certified (CCRF) &amp; Claude AI Fluency</li>
                 <li><strong>Google Cloud:</strong> Generative AI Fundamentals &amp; Build with Gemini (Skill Badge - Intermediate)</li>
                 <li><strong>AWS:</strong> Prompt Engineering Foundation</li>
             </ul>`;
+        }
+        if (query.includes('ai-500') || query.includes('ai 500') || query.includes('multi-agent ai solutions expert') || query.includes('multi agent ai solutions expert')) {
+            return `Sapan holds the <strong>Microsoft Certified: Multi-Agent AI Solutions Expert (AI-500)</strong> credential, validating advanced capabilities in architecting, orchestrating, and deploying enterprise-scale multi-agent AI systems, autonomous agent workflows, and Copilot integrations on Microsoft Azure.`;
         }
         if (query.includes('build with gemini') || query.includes('gemini cert') || query.includes('gemini badge')) {
             return `Sapan has earned the <strong>Build with Gemini</strong> Skill Badge (Intermediate) issued by <strong>Google Cloud</strong>, validating hands-on expertise in AI Platform Governance and Security, Gemini Enterprise, and prompt engineering.`;
