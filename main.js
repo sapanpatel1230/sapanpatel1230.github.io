@@ -448,7 +448,7 @@ function initCopilotChat() {
             </ul>`;
         }
         if (query.includes('ai-500') || query.includes('ai 500') || query.includes('multi-agent ai solutions expert') || query.includes('multi agent ai solutions expert')) {
-            return `Sapan holds the <strong>Microsoft Certified: Multi-Agent AI Solutions Expert (AI-500)</strong> credential, validating advanced capabilities in architecting, orchestrating, and deploying enterprise-scale multi-agent AI systems, autonomous agent workflows, and Copilot integrations on Microsoft Azure.`;
+            return `Sapan holds the <strong>Microsoft Certified: Multi-Agent AI Solutions Expert (AI-500)</strong> credential, validating advanced capabilities in architecting, orchestrating, and deploying enterprise-scale multi-agent AI systems, autonomous agent workflows, and Copilot integrations on Microsoft Azure.<br/><br/>Official certification details: <a href="https://learn.microsoft.com/en-us/credentials/certifications/multi-agent-ai-solutions-expert/" target="_blank" style="color:var(--secondary); text-decoration:underline;">Microsoft Learn (AI-500)</a>.`;
         }
         if (query.includes('build with gemini') || query.includes('gemini cert') || query.includes('gemini badge')) {
             return `Sapan has earned the <strong>Build with Gemini</strong> Skill Badge (Intermediate) issued by <strong>Google Cloud</strong>, validating hands-on expertise in AI Platform Governance and Security, Gemini Enterprise, and prompt engineering.`;
