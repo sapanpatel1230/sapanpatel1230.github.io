@@ -15,7 +15,7 @@
     <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="index.css?v=33.0">
+    <link rel="stylesheet" href="index.css?v=34.0">
 </head>
 <body class="blogs-page">
     <!-- Canvas for neural particle background -->
@@ -76,11 +76,12 @@
 
                 <!-- Filter Topics Strip -->
                 <div class="blog-filter-strip">
-                    <span class="blog-filter-pill active"><i class="fa-solid fa-layer-group"></i> All Publications (2)</span>
-                    <span class="blog-filter-pill"><i class="fa-solid fa-shapes"></i> Agentic UI</span>
-                    <span class="blog-filter-pill"><i class="fa-brands fa-microsoft"></i> Copilot Studio Apps</span>
-                    <span class="blog-filter-pill"><i class="fa-brands fa-github"></i> GitHub Copilot</span>
-                    <span class="blog-filter-pill"><i class="fa-solid fa-shield-halved"></i> Enterprise AI</span>
+                    <button class="blog-filter-pill active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All Publications (6)</button>
+                    <button class="blog-filter-pill" data-filter="copilot-studio"><i class="fa-brands fa-microsoft"></i> Copilot Studio</button>
+                    <button class="blog-filter-pill" data-filter="agentic-ui"><i class="fa-solid fa-shapes"></i> Agentic UI</button>
+                    <button class="blog-filter-pill" data-filter="github-copilot"><i class="fa-brands fa-github"></i> GitHub Copilot</button>
+                    <button class="blog-filter-pill" data-filter="knowledge"><i class="fa-solid fa-database"></i> Knowledge &amp; RAG</button>
+                    <button class="blog-filter-pill" data-filter="enterprise-ai"><i class="fa-solid fa-shield-halved"></i> Enterprise AI</button>
                 </div>
             </div>
         </section>
@@ -89,8 +90,180 @@
         <section class="section blogs-content-section" style="padding-top: 0;">
             <div class="container">
                 <div class="blogs-grid">
-                    <!-- Blog Card 1: Agentic UI Components in Copilot Agents -->
-                    <article class="blog-card animate-card">
+                    <!-- Blog Card 1: Request Human Assistance in Copilot AI Agents -->
+                    <article class="blog-card animate-card" data-category="all copilot-studio enterprise-ai github-copilot">
+                        <div class="blog-image-wrapper">
+                            <img src="images/blog_human_assistance.jpg" alt="What Happens When Copilot AI Agent Doesn't Know What to Do? It Can Ask a Human" class="blog-img" loading="lazy">
+                            <span class="blog-platform-badge">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn Publication
+                            </span>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> October 19, 2026</span>
+                                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 4 min read</span>
+                                <span class="blog-meta-item"><i class="fa-solid fa-user-pen"></i> Sapan Patel</span>
+                            </div>
+                            <h2 class="blog-title">
+                                <a href="https://lnkd.in/p/dhaPcZSx" target="_blank" rel="noopener noreferrer" class="blog-title-link">
+                                    What Happens When Copilot AI Agent Doesn't Know What to Do? It Can Ask a Human <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </h2>
+                            <p class="blog-desc">
+                                What should an AI agent do when it hits an unknown edge case or uncertainty? The smartest action is to ask a human. Deep dive into the "Request Human Assistance" capability in Microsoft Copilot Studio (GitHub Copilot Harness) for resilient Human-in-the-Loop (HITL) workflows.
+                            </p>
+                            <ul class="blog-bullets">
+                                <li><strong>Autonomous Fallback Design:</strong> Gracefully escalating edge cases, policy ambiguities, and permission blockers to human experts instead of failing or hallucinating.</li>
+                                <li><strong>GitHub Copilot Harness:</strong> Leveraging conversational orchestration within Copilot Studio to seamlessly trigger structured human handoffs.</li>
+                                <li><strong>Human-in-the-Loop Governance:</strong> Ensuring compliance, auditability, and operational safety for mission-critical enterprise AI architectures.</li>
+                            </ul>
+                            <div class="blog-tags">
+                                <span class="tag">Human-in-the-Loop</span>
+                                <span class="tag">Copilot Studio</span>
+                                <span class="tag">AIAgents</span>
+                                <span class="tag">GitHub Copilot</span>
+                                <span class="tag">Enterprise AI</span>
+                                <span class="tag">Governance</span>
+                            </div>
+                            <div class="blog-footer">
+                                <a href="https://lnkd.in/p/dhaPcZSx" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm blog-btn">
+                                    Read Post on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2: Chat Experience in Copilot Studio (ServiceNow Agent & Flow) -->
+                    <article class="blog-card animate-card" data-category="all copilot-studio enterprise-ai github-copilot">
+                        <div class="blog-image-wrapper">
+                            <img src="images/blog_copilot_studio_chat.jpg" alt="I Tried the New Chat Experience in Copilot Studio. It Built My Agent & Flow in 5 Minutes" class="blog-img" loading="lazy">
+                            <span class="blog-platform-badge">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn Publication
+                            </span>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> October 18, 2026</span>
+                                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                                <span class="blog-meta-item"><i class="fa-solid fa-user-pen"></i> Sapan Patel</span>
+                            </div>
+                            <h2 class="blog-title">
+                                <a href="https://lnkd.in/p/dAQz-Z6Y" target="_blank" rel="noopener noreferrer" class="blog-title-link">
+                                    I Tried the New Chat Experience in Copilot Studio. It Built My Agent &amp; Flow in 5 Minutes <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </h2>
+                            <p class="blog-desc">
+                                Described business requirements in Copilot Studio’s conversational "CHAT" option (GitHub Copilot harness). In 5–7 minutes, a complete agent and Power Automate flow with ServiceNow connector integration were synthesized, tested, and updated directly via chat.
+                            </p>
+                            <ul class="blog-bullets">
+                                <li><strong>Conversational Flow Synthesis:</strong> Building production-ready business agents and event-driven flows entirely from plain language descriptions.</li>
+                                <li><strong>Automated ServiceNow Integration:</strong> Instant schema resolution, incident routing connectors, and email trigger execution without manual boilerplate.</li>
+                                <li><strong>In-Chat Iterative Refinement:</strong> Applying functional updates and behavioral changes dynamically within the same chat session.</li>
+                            </ul>
+                            <div class="blog-tags">
+                                <span class="tag">Copilot Studio</span>
+                                <span class="tag">ServiceNow</span>
+                                <span class="tag">Agentic AI</span>
+                                <span class="tag">Power Automate</span>
+                                <span class="tag">GitHub Copilot</span>
+                                <span class="tag">Autonomous Agents</span>
+                            </div>
+                            <div class="blog-footer">
+                                <a href="https://lnkd.in/p/dAQz-Z6Y" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm blog-btn">
+                                    Read Post on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3: Agents Have Their Own Identity, Email ID & Memory -->
+                    <article class="blog-card animate-card" data-category="all copilot-studio enterprise-ai">
+                        <div class="blog-image-wrapper">
+                            <img src="images/blog_agent_identity.jpg" alt="Now Microsoft Copilot Studio Agents Have Their Own Identity, Email ID and More" class="blog-img" loading="lazy">
+                            <span class="blog-platform-badge">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn Publication
+                            </span>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> October 15, 2026</span>
+                                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 6 min read</span>
+                                <span class="blog-meta-item"><i class="fa-solid fa-user-pen"></i> Sapan Patel</span>
+                            </div>
+                            <h2 class="blog-title">
+                                <a href="https://lnkd.in/p/dXCRg-yP" target="_blank" rel="noopener noreferrer" class="blog-title-link">
+                                    Now Microsoft Copilot Studio Agents Have Their Own Identity, Email ID and More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </h2>
+                            <p class="blog-desc">
+                                Microsoft’s paradigm shift: Copilot Studio agents now possess dedicated Microsoft 365 identities, individual corporate email addresses, business process memory across sessions, and proactive event/cron triggers that autonomously move work forward.
+                            </p>
+                            <ul class="blog-bullets">
+                                <li><strong>First-Class Agent Identity:</strong> Provisioning dedicated M365 identities and corporate email addresses governed by Entra ID role-based access.</li>
+                                <li><strong>Business Process Memory:</strong> Preserving state and context across multi-day enterprise workflows rather than single stateless prompt turns.</li>
+                                <li><strong>Proactive Event Triggers:</strong> Enabling agents to initiate actions autonomously upon incoming emails, webhooks, or scheduled triggers.</li>
+                            </ul>
+                            <div class="blog-tags">
+                                <span class="tag">Agent Identity</span>
+                                <span class="tag">Copilot Studio</span>
+                                <span class="tag">Microsoft 365</span>
+                                <span class="tag">Agentic AI</span>
+                                <span class="tag">Autonomous Workflows</span>
+                                <span class="tag">Enterprise Security</span>
+                            </div>
+                            <div class="blog-footer">
+                                <a href="https://lnkd.in/p/dXCRg-yP" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm blog-btn">
+                                    Read Post on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4: SharePoint Knowledge Base for Copilot & AI Agents -->
+                    <article class="blog-card animate-card" data-category="all copilot-studio enterprise-ai knowledge">
+                        <div class="blog-image-wrapper">
+                            <img src="images/blog_sharepoint_knowledge_base.jpg" alt="Microsoft Is Turning SharePoint into a Knowledge Base for Copilot and AI Agents" class="blog-img" loading="lazy">
+                            <span class="blog-platform-badge">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn Publication
+                            </span>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span class="blog-meta-item"><i class="fa-regular fa-calendar"></i> October 14, 2026</span>
+                                <span class="blog-meta-item"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                                <span class="blog-meta-item"><i class="fa-solid fa-user-pen"></i> Sapan Patel</span>
+                            </div>
+                            <h2 class="blog-title">
+                                <a href="https://lnkd.in/p/dsC-Z8Wy" target="_blank" rel="noopener noreferrer" class="blog-title-link">
+                                    Microsoft Is Turning SharePoint into a Knowledge Base for Copilot and AI Agents <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </h2>
+                            <p class="blog-desc">
+                                SharePoint is transforming from passive storage into an active AI knowledge engine. Microsoft’s new Team Knowledge Base powered by Copilot and Work IQ compiles scattered documents, emails, and chats into interlinked, agent-optimized Markdown.
+                            </p>
+                            <ul class="blog-bullets">
+                                <li><strong>Semantic Markdown Restructuring:</strong> Converting unstructured enterprise files into interlinked, agent-friendly Markdown for high-efficiency LLM context.</li>
+                                <li><strong>Work IQ Contextual Synthesis:</strong> Compiling knowledge across legal, engineering, and sales silos into curated enterprise knowledge graphs.</li>
+                                <li><strong>4× Response Acceleration &amp; Token Optimization:</strong> Early benchmarks show up to 4× faster agent responses and 30% higher token efficiency in internal testing.</li>
+                            </ul>
+                            <div class="blog-tags">
+                                <span class="tag">SharePoint</span>
+                                <span class="tag">Work IQ</span>
+                                <span class="tag">Knowledge Base</span>
+                                <span class="tag">RAG Architecture</span>
+                                <span class="tag">Copilot Studio</span>
+                                <span class="tag">Enterprise AI</span>
+                            </div>
+                            <div class="blog-footer">
+                                <a href="https://lnkd.in/p/dsC-Z8Wy" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm blog-btn">
+                                    Read Post on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5: Agentic UI Components in Copilot Agents -->
+                    <article class="blog-card animate-card" data-category="all agentic-ui copilot-studio enterprise-ai">
                         <div class="blog-image-wrapper">
                             <img src="images/blog_agentic_ui.jpg" alt="From Answers to Action: Agentic UI Components in Copilot Agents" class="blog-img" loading="lazy">
                             <span class="blog-platform-badge">
@@ -132,8 +305,8 @@
                         </div>
                     </article>
 
-                    <!-- Blog Card 2: Copilot Studio Introduces Apps (Preview) -->
-                    <article class="blog-card animate-card">
+                    <!-- Blog Card 6: Copilot Studio Introduces Apps (Preview) -->
+                    <article class="blog-card animate-card" data-category="all copilot-studio github-copilot enterprise-ai">
                         <div class="blog-image-wrapper">
                             <img src="images/blog_copilot_studio_apps.jpg" alt="From Prompt to Business Application: Microsoft Copilot Studio Introduces Apps" class="blog-img" loading="lazy">
                             <span class="blog-platform-badge">
@@ -220,6 +393,33 @@
     </main>
 
     <!-- Interactivity Engine -->
-    <script src="main.js?v=25.0"></script>
+    <script src="main.js?v=33.0"></script>
+    <script>
+        // Interactive Category Filter for Blogs
+        document.addEventListener('DOMContentLoaded', () => {
+            const pills = document.querySelectorAll('.blog-filter-pill');
+            const cards = document.querySelectorAll('.blog-card');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+
+                    const filter = pill.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const categories = (card.getAttribute('data-category') || '').split(' ');
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.style.display = 'flex';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
