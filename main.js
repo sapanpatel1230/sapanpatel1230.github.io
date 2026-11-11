@@ -436,16 +436,28 @@ function initCopilotChat() {
         if (query.includes('experience') || query.includes('work') || query.includes('job') || query.includes('tcs')) {
             return `Sapan is currently the <strong>AI Automation Lead</strong> at TCS (May 2025 - Present), managing agent developers and client deployments. Prior to this, he was an <strong>AI Agent Developer</strong> (2023-2025) and a <strong>Software Engineer</strong> (2022-2023) where he built the IGNIO automation tool.`;
         }
-        if (query.includes('cert') || query.includes('certification') || query.includes('claude') || query.includes('badge') || query.includes('credly') || query.includes('practitioner') || query.includes('gemini')) {
-            return `Sapan holds several top AI & Cloud certifications and honors:
+        if (query.includes('cert') || query.includes('certification') || query.includes('claude') || query.includes('badge') || query.includes('credly') || query.includes('practitioner') || query.includes('gemini') || query.includes('anthropic')) {
+            return `Sapan holds top-tier enterprise AI credentials across Anthropic, OpenAI, Microsoft, and Google Cloud:
             <ul class="bullet-list">
-                <li><strong>OpenAI / ChatGPT:</strong> <strong>ChatGPT Expert (All Levels Achieved)</strong> &bull; ChatGPT Solutions Practitioner, OpenAI Technical Practitioner, ChatGPT Deployment Practitioner, OpenAI Consultative Solutions Practitioner (Valid through Sep 30, 2027)</li>
+                <li><strong>Anthropic:</strong> <strong>Claude Forward Deployed Engineer (FDE) Program (Completed 10/10 Courses)</strong> &bull; Claude Certified Developer (CCDV-F), Claude Architect Certified (CCRF) &amp; Claude AI Fluency</li>
+                <li><strong>OpenAI:</strong> <strong>ChatGPT Expert (All Levels Achieved)</strong> &bull; ChatGPT Solutions Practitioner, OpenAI Technical Practitioner, ChatGPT Deployment Practitioner, OpenAI Consultative Solutions Practitioner (Valid through Sep 30, 2027)</li>
                 <li><strong>Microsoft Elite:</strong> <a href="https://www.credly.com/badges/0821b782-ef1b-46cf-8460-d6ac55a606a3/public_url" target="_blank" style="color:var(--secondary); text-decoration:underline;">Frontier Transformation Engineer (Titan Badge)</a></li>
                 <li><strong>Microsoft Certifications:</strong> Multi-Agent AI Solutions Expert (AI-500), Agentic AI Business Solutions Architect (AB-100), Developing AI Apps and Agents on Azure (AI-103), AI Agent Builder (AB-620), Copilot Administration Fundamentals (AB-410), Copilot Agent Fundamentals (AB-900), GitHub Copilot (GH-300), AI Transformation Leader (AB-731), AI Business Professional (AB-730)</li>
-                <li><strong>Anthropic:</strong> Claude Certified Developer (CCDV-F), Claude Architect Certified (CCRF) &amp; Claude AI Fluency</li>
                 <li><strong>Google Cloud:</strong> Generative AI Fundamentals &amp; Build with Gemini (Skill Badge - Intermediate)</li>
                 <li><strong>AWS:</strong> Prompt Engineering Foundation</li>
             </ul>`;
+        }
+        if (query.includes('fde') || query.includes('forward deployed engineer') || query.includes('claude fde') || query.includes('anthropic fde')) {
+            return `Sapan has successfully completed <strong>Anthropic's Claude Forward Deployed Engineer (FDE) Program</strong> (all 10 courses completed in November 2026).<br/><br/>
+            This enterprise learning path validates hands-on expertise across:
+            <ul class="bullet-list">
+                <li><strong>Claude Models &amp; Agent Loops:</strong> Advanced architecture, platform APIs, and multi-turn loops</li>
+                <li><strong>Model Context Protocol (MCP):</strong> Enterprise context management and tool integrations</li>
+                <li><strong>Claude Code:</strong> Hands-on terminal development and agentic workflows</li>
+                <li><strong>Agent Skills &amp; Prompt Engineering:</strong> Hooks, reusable capabilities, and model selection</li>
+                <li><strong>Full Delivery Lifecycle:</strong> Discover &rarr; Design &rarr; Build &rarr; Validate &rarr; Deploy &rarr; Drive Adoption</li>
+            </ul>
+            Official LinkedIn verification: <a href="https://lnkd.in/p/gq8u492M" target="_blank" style="color:#E27D60; font-weight:600; text-decoration:underline;">Anthropic Claude FDE Milestone <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.`;
         }
         if (query.includes('ai-500') || query.includes('ai 500') || query.includes('multi-agent ai solutions expert') || query.includes('multi agent ai solutions expert')) {
             return `Sapan holds the <strong>Microsoft Certified: Multi-Agent AI Solutions Expert (AI-500)</strong> credential, validating advanced capabilities in architecting, orchestrating, and deploying enterprise-scale multi-agent AI systems, autonomous agent workflows, and Copilot integrations on Microsoft Azure.<br/><br/>Official certification details: <a href="https://learn.microsoft.com/en-us/credentials/certifications/multi-agent-ai-solutions-expert/" target="_blank" style="color:var(--secondary); text-decoration:underline;">Microsoft Learn (AI-500)</a>.`;

@@ -1412,9 +1412,40 @@ a.cert-card {
 
 .cert-badge-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
+}
+
+.cert-badge-header h4 {
+    margin: 0;
+    line-height: 1.25;
+}
+
+.cert-card-anthropic {
+    border-color: rgba(217, 119, 87, 0.45);
+    background: linear-gradient(135deg, rgba(217, 119, 87, 0.09) 0%, rgba(139, 92, 246, 0.05) 100%);
+    position: relative;
+    box-shadow: 0 4px 20px rgba(217, 119, 87, 0.08);
+}
+
+.cert-card-anthropic:hover {
+    border-color: #E27D60;
+    background: linear-gradient(135deg, rgba(217, 119, 87, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+    box-shadow: 0 6px 24px rgba(217, 119, 87, 0.25);
+    transform: translateY(-3px);
+}
+
+.cert-verify-anthropic {
+    color: #E27D60;
+    background: rgba(217, 119, 87, 0.14);
+    border: 1px solid rgba(217, 119, 87, 0.35);
+}
+
+.cert-card-anthropic:hover .cert-verify-anthropic {
+    background: rgba(217, 119, 87, 0.25);
+    border-color: #E27D60;
+    box-shadow: 0 0 10px rgba(217, 119, 87, 0.35);
 }
 
 .cert-verify-tag {
