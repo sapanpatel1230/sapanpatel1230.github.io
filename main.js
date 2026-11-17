@@ -239,9 +239,24 @@ function initCopilotChat() {
             Sapan published a research paper titled: <strong>"A Comparative Analysis of Artificial and Biological Neural Networks: Architectures, Mechanisms and the Future of Cognition"</strong> on the <a href="https://osf.io/6ehxk/overview?view_only=8ce9a7ef221849168b4ecf2d1e1fd021" target="_blank" class="highlight-label" style="color:#c084fc; text-decoration:underline;">Open Science Framework (OSF)</a>.
             The paper analyzes the computational efficiency of backpropagation in ANNs compared to biological synaptic plasticity, exploring how next-generation AI agents can incorporate biological neural mechanics to run local intelligence on lower power budgets.
         `,
-        hackathons: `
-            Sapan has a strong track record of competitive innovation:
+        'copilot-gallery': `
+            Sapan has achieved the milestone of having <strong>two official solutions selected and published on the official Microsoft Copilot Studio Gallery</strong> (<a href="https://microsoft.github.io/copilot-studio-gallery/" target="_blank" style="color:var(--secondary); text-decoration:underline;">microsoft.github.io/copilot-studio-gallery</a>):
+            <br/><br/>
             <ul class="bullet-list">
+                <li>
+                    🏛️ <strong><a href="https://microsoft.github.io/copilot-studio-gallery/solutions/it-service-desk-assistant/" target="_blank" style="color:#38bdf8; text-decoration:underline;">IT Service Desk Assistant</a></strong> (IT &amp; Security &bull; Agent + Workflow):
+                    <br/>Front-line helpdesk triage agent with self-service diagnostic playbooks (identity recovery, password resets, VPN, software licensing) and structured incident escalation formatting. Includes 1 workflow, 1 agent, 1 MCP server, 1 tool, and 3 skills.
+                </li>
+                <li>
+                    🛡️ <strong><a href="https://microsoft.github.io/copilot-studio-gallery/solutions/agent-dlp-security-guard/" target="_blank" style="color:#c084fc; text-decoration:underline;">Agent DLP &amp; Security Guard</a></strong> (Governance &amp; DLP &bull; Agent + Workflow):
+                    <br/>Enterprise Copilot Studio governance agent auditing maker configurations, topic instructions, and prompt flows for Data Loss Prevention (DLP) compliance, sensitive data leakage (PII, credentials, connection strings), unapproved HTTP connectors, and prompt injection vulnerabilities. Includes 1 workflow, 1 agent, 1 MCP server, 1 tool, and 3 skills.
+                </li>
+            </ul>
+        `,
+        hackathons: `
+            Sapan has a strong track record of competitive innovation and official platform recognition:
+            <ul class="bullet-list">
+                <li>🏛️ <strong>Official Microsoft Copilot Studio Gallery Publisher (2026):</strong> Two enterprise solutions (<strong>IT Service Desk Assistant</strong> &amp; <strong>Agent DLP Security Guard</strong>) selected and published on <a href="https://microsoft.github.io/copilot-studio-gallery/" target="_blank" style="color:var(--secondary); text-decoration:underline;">Microsoft's Official Copilot Studio Gallery</a>.</li>
                 <li>🏆 <strong>Winner - TCS AI Fridays (Season 1):</strong> Captured first place in TCS's flagship AI hackathon at Garima Park, Gandhinagar (2025).</li>
                 <li>👥 <strong>Mentor - TCS AI Fridays (Season 2):</strong> Served as a technical mentor, guiding development teams in architecting low-credit multi-agent products.</li>
                 <li>🏅 <strong>AI Appreciate Badge:</strong> Awarded "AI For All" honor by Intel and Digital India (2025) for spreading AI literacy.</li>
@@ -430,7 +445,10 @@ function initCopilotChat() {
         if (query.includes('security') || query.includes('firewall') || query.includes('prompt injection') || query.includes('worm') || query.includes('ppf') || query.includes('threat') || query.includes('red team')) {
             return dialogue['security-research'];
         }
-        if (query.includes('hackathon') || query.includes('tcs ai fridays') || query.includes('winner') || query.includes('award') || query.includes('win')) {
+        if (query.includes('gallery') || query.includes('copilot studio gallery') || query.includes('microsoft gallery') || query.includes('it service desk') || query.includes('agent dlp') || query.includes('security guard') || query.includes('service desk assistant')) {
+            return dialogue['copilot-gallery'];
+        }
+        if (query.includes('hackathon') || query.includes('tcs ai fridays') || query.includes('winner') || query.includes('award') || query.includes('win') || query.includes('achievement') || query.includes('accomplishment')) {
             return dialogue['hackathons'];
         }
         if (query.includes('experience') || query.includes('work') || query.includes('job') || query.includes('tcs')) {
